@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hajj Guide - Your Complete Islamic Pilgrimage Companion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;700&family=Reem+Kufi:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1e8449;
+            --secondary-color: #2ecc71;
+            --accent-color: #f1c40f;
+            --text-color: #2c3e50;
+            --light-bg: #f5f5f5;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Amiri', serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--light-bg);
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M50 0 L100 50 L50 100 L0 50 Z" fill="none" stroke="%231e8449" stroke-width="0.5" opacity="0.1"/></svg>');
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header::before {
+            content: 'الحج';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-family: 'Reem Kufi', 'Noto Naskh Arabic', serif;
+            font-size: 4em;
+            color: rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3em;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .card h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 10px;
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--primary-color);
+        }
+
+        .timeline-item {
+            padding: 20px;
+            border-left: 3px solid var(--primary-color);
+            margin-bottom: 30px;
+            position: relative;
+            background: var(--white);
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -12px;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            border: 4px solid var(--white);
+        }
+
+        .timeline-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .types-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .types-table th, .types-table td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .types-table th {
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        .types-table tr:nth-child(even) {
+            background-color: rgba(46, 204, 113, 0.1);
+        }
+
+        .types-table tr:hover {
+            background-color: rgba(46, 204, 113, 0.2);
+        }
+
+        .faq-section {
+            margin: 40px 0;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .important {
+            background: linear-gradient(135deg, #f9e79f 0%, #f1c40f 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .important::before {
+            content: '!';
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 4em;
+            opacity: 0.1;
+            font-family: 'Noto Naskh Arabic', serif;
+        }
+
+        .important h3 {
+            color: var(--text-color);
+            margin-bottom: 15px;
+            font-size: 1.6em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                margin-left: 30px;
+            }
+        }
+
+        /* Islamic Decorative Elements */
+        .islamic-pattern {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M50 0 L100 50 L50 100 L0 50 Z" fill="none" stroke="%231e8449" stroke-width="0.5" opacity="0.1"/></svg>');
+            opacity: 0.1;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .arabic-text {
+            font-family: 'Noto Naskh Arabic', serif;
+        }
+
+        /* New Navigation Styles */
+        .nav-container {
+            position: sticky;
+            top: 0;
+            background: var(--white);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            margin-bottom: 30px;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .search-container {
+            position: relative;
+            margin: 20px 0;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 15px 25px;
+            border: 2px solid var(--primary-color);
+            border-radius: 30px;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .search-input:focus {
+            outline: none;
+            box-shadow: 0 0 15px rgba(30, 132, 73, 0.2);
+            border-color: var(--secondary-color);
+        }
+
+        .search-suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-height: 300px;
+            overflow-y: auto;
+            display: none;
+            z-index: 1000;
+        }
+
+        .search-suggestion-item {
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .search-suggestion-item:hover {
+            background: rgba(46, 204, 113, 0.1);
+        }
+
+        .search-suggestion-item .highlight {
+            background: rgba(46, 204, 113, 0.2);
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        .search-suggestion-category {
+            font-size: 0.8em;
+            color: var(--primary-color);
+            margin-top: 5px;
+        }
+
+        .no-results {
+            padding: 20px;
+            text-align: center;
+            color: var(--text-color);
+            font-style: italic;
+        }
+
+        .search-highlight {
+            background: rgba(46, 204, 113, 0.2);
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        .search-clear {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            cursor: pointer;
+            padding: 5px;
+            display: none;
+        }
+
+        .search-clear.visible {
+            display: block;
+        }
+
+        .search-clear:hover {
+            color: var(--secondary-color);
+        }
+
+        .table-of-contents {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc-list li {
+            margin: 10px 0;
+        }
+
+        .toc-list a {
+            color: var(--text-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .toc-list a:hover {
+            color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary-color);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            opacity: 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+        }
+
+        .section-anchor {
+            scroll-margin-top: 100px;
+        }
+
+        .quick-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .quick-link {
+            background: var(--white);
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .quick-link:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .nav-content {
+                justify-content: center;
+            }
+        }
+
+        /* Enhanced Tab Styles */
+        .tabs-container {
+            margin: 20px 0;
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .tabs-header {
+            display: flex;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .tabs-header::-webkit-scrollbar {
+            display: none;
+        }
+
+        .tab-button {
+            padding: 18px 30px;
+            color: rgba(255, 255, 255, 0.8);
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1em;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            position: relative;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            font-family: 'Amiri', serif;
+        }
+
+        .tab-button:hover {
+            color: var(--white);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .tab-button.active {
+            color: var(--primary-color);
+            background: var(--white);
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+        }
+
+        .tab-button.active::before {
+            content: '•';
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-family: 'Noto Naskh Arabic', serif;
+            font-size: 1.2em;
+            color: var(--primary-color);
+        }
+
+        .tab-content {
+            display: none;
+            padding: 30px;
+            background: var(--white);
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Enhanced Card Styles */
+        .horizontal-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .horizontal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .horizontal-card h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .horizontal-card h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 3px;
+        }
+
+        .horizontal-card::before {
+            content: '﷽';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-family: 'Reem Kufi', 'Noto Naskh Arabic', serif;
+            font-size: 1.5em;
+            color: var(--primary-color);
+            opacity: 0.1;
+        }
+
+        /* Enhanced Timeline Styles */
+        .timeline-horizontal {
+            display: flex;
+            overflow-x: auto;
+            gap: 25px;
+            padding: 30px 0;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .timeline-item-horizontal {
+            min-width: 320px;
+            scroll-snap-align: start;
+            background: var(--white);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            position: relative;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item-horizontal:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .timeline-item-horizontal::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -12px;
+            width: 24px;
+            height: 24px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            transform: translateY(-50%);
+            border: 4px solid var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .timeline-item-horizontal::after {
+            content: '•';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-family: 'Noto Naskh Arabic', serif;
+            font-size: 1.2em;
+            color: var(--primary-color);
+        }
+
+        .timeline-item-horizontal h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .timeline-item-horizontal h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 8px;
+            height: 8px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Enhanced FAQ Styles */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .faq-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .faq-question::before {
+            content: 'س:';
+            font-family: 'Noto Naskh Arabic', serif;
+        }
+
+        @media (max-width: 768px) {
+            .tabs-header {
+                padding: 0 15px;
+            }
+
+            .tab-button {
+                padding: 15px 20px;
+                font-size: 1em;
+            }
+
+            .tab-content {
+                padding: 20px;
+            }
+
+            .horizontal-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Islamic Calligraphy Styles */
+        .arabic-calligraphy {
+            font-family: 'Reem Kufi', 'Noto Naskh Arabic', serif;
+            line-height: 1.8;
+        }
+
+        .bismillah {
+            font-size: 2.5em;
+            text-align: center;
+            margin: 20px 0;
+            color: var(--primary-color);
+            opacity: 0.8;
+            font-family: 'Reem Kufi', 'Noto Naskh Arabic', serif;
+        }
+
+        .arabic-title {
+            font-family: 'Reem Kufi', 'Noto Naskh Arabic', serif;
+            font-size: 2em;
+            color: var(--primary-color);
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .arabic-subtitle {
+            font-family: 'Noto Naskh Arabic', serif;
+            font-size: 1.2em;
+            color: var(--text-color);
+            text-align: center;
+            margin: 5px 0;
+        }
+
+        .islamic-border {
+            position: relative;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .islamic-border::before {
+            content: 'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ';
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            font-family: 'Reem Kufi', 'Noto Naskh Arabic', serif;
+            font-size: 1.2em;
+            color: var(--primary-color);
+            opacity: 0.2;
+            transform: rotate(-5deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="islamic-pattern"></div>
+    
+    <header>
+        <h1>Hajj Guide</h1>
+        <p class="arabic-title">دليلك الشامل للحج</p>
+        <p class="arabic-subtitle">Your Complete Islamic Pilgrimage Companion</p>
+    </header>
+
+    <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search in Hajj Guide..." id="searchInput">
+        <button class="search-clear" id="searchClear">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="search-suggestions" id="searchSuggestions"></div>
+    </div>
+
+    <div class="tabs-container islamic-border">
+        <ul class="tabs-header">
+            <li><button class="tab-button active" data-tab="overview">Overview</button></li>
+            <li><button class="tab-button" data-tab="types">Types of Hajj</button></li>
+            <li><button class="tab-button" data-tab="steps">Hajj Steps</button></li>
+            <li><button class="tab-button" data-tab="places">Important Places</button></li>
+            <li><button class="tab-button" data-tab="supplications">Supplications</button></li>
+            <li><button class="tab-button" data-tab="faq">FAQ</button></li>
+        </ul>
+
+        <div class="tab-content active" id="overview">
+            <div class="horizontal-grid">
+                <div class="horizontal-card">
+                    <h2>What is Hajj?</h2>
+                    <p>Hajj is the annual Islamic pilgrimage to Makkah, Saudi Arabia, and is one of the Five Pillars of Islam.</p>
+                </div>
+                <div class="horizontal-card">
+                    <h2>When is Hajj?</h2>
+                    <p>Hajj occurs during the Islamic month of Dhu al-Hijjah and involves a series of rituals performed over several days.</p>
+                </div>
+                <div class="horizontal-card">
+                    <h2>Who Must Perform Hajj?</h2>
+                    <p>Hajj is obligatory once in a lifetime for every adult Muslim who is physically and financially able.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="types">
+            <div class="horizontal-grid">
+                <div class="horizontal-card">
+                    <h2>Types of Hajj</h2>
+                    <table class="types-table">
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>Umrah</th>
+                            <th>Sacrifice</th>
+                        </tr>
+                        <tr>
+                            <td>Tamattu'</td>
+                            <td>Perform Umrah during Hajj months, exit Ihram, then re-enter for Hajj</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Qiran</td>
+                            <td>Perform Umrah and Hajj together without exiting Ihram</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Ifrad</td>
+                            <td>Perform only Hajj (no Umrah)</td>
+                            <td>No</td>
+                            <td>No</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="steps">
+            <div class="timeline-horizontal">
+                <div class="timeline-item-horizontal">
+                    <h3>1. Preparation & Intention</h3>
+                    <p>Make the sincere intention to perform Hajj solely for the sake of Allah.</p>
+                </div>
+                <div class="timeline-item-horizontal">
+                    <h3>2. Enter State of Ihram</h3>
+                    <p>At the Miqat, don the special white garments and recite the Talbiyah.</p>
+                </div>
+                <div class="timeline-item-horizontal">
+                    <h3>3. Perform Umrah</h3>
+                    <p>Tawaf, Sa'i, and shaving/trimming hair.</p>
+                </div>
+                <div class="timeline-item-horizontal">
+                    <h3>4. Day at Mina</h3>
+                    <p>Spend the day and night in prayer at Mina.</p>
+                </div>
+                <div class="timeline-item-horizontal">
+                    <h3>5. Day at Arafat</h3>
+                    <p>Stand in prayer and supplication from noon until sunset.</p>
+                </div>
+                <div class="timeline-item-horizontal">
+                    <h3>6. Muzdalifah & Stoning</h3>
+                    <p>Collect pebbles and perform the stoning ritual.</p>
+                </div>
+                <div class="timeline-item-horizontal">
+                    <h3>7. Sacrifice & Tawaf</h3>
+                    <p>Offer sacrifice and perform Tawaf al-Ifadah.</p>
+                </div>
+                <div class="timeline-item-horizontal">
+                    <h3>8. Farewell Tawaf</h3>
+                    <p>Perform final Tawaf before leaving Makkah.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="places">
+            <div class="horizontal-grid">
+                <div class="horizontal-card">
+                    <h2>Important Places</h2>
+                    <ul>
+                        <li>Masjid al-Haram - Mecca</li>
+                        <li>Kaaba - House of Allah</li>
+                        <li>Mount Arafat</li>
+                        <li>Mina - Tent City</li>
+                        <li>Muzdalifah</li>
+                        <li>Jamarat - Stoning Pillars</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="supplications">
+            <div class="horizontal-grid">
+                <div class="horizontal-card">
+                    <h2>Supplications</h2>
+                    <p>Essential duaas for different stages of Hajj:</p>
+                    <ul>
+                        <li>Tawaf Duaas</li>
+                        <li>Arafat Duaa</li>
+                        <li>Mina and Muzdalifah Duaas</li>
+                        <li>Sacrifice Duaa</li>
+                        <li>General Hajj Supplications</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="faq">
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <p class="faq-question">Is visiting Madinah part of Hajj?</p>
+                    <p>No, visiting Madinah is not a Hajj requirement but is highly recommended.</p>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-question">Who is exempt from Hajj?</p>
+                    <p>Those who are not physically or financially able are exempt.</p>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-question">What is Transfer Hajj?</p>
+                    <p>Appointing someone to perform Hajj on another's behalf if unable to perform it.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="important">
+        <h3>Important Reminders</h3>
+        <p>Hajj is one of the five pillars of Islam and is obligatory for every Muslim who has the physical and financial capability to perform it at least once in their lifetime.</p>
+        <p>Please ensure you follow all Hajj rules and regulations set by the Saudi authorities.</p>
+        <p>Prepare physically and spiritually before undertaking the journey.</p>
+        <p>Learn the supplications and rituals in advance.</p>
+        <p>Maintain patience and humility throughout the pilgrimage.</p>
+    </div>
+
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <footer>
+        <p>&copy; 2024 Hajj Guide | Your Complete Islamic Pilgrimage Companion</p>
+    </footer>
+
+    <script>
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Tab Functionality
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Add active class to clicked button and corresponding content
+                button.classList.add('active');
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Enhanced Search Functionality
+        const searchInput = document.getElementById('searchInput');
+        const searchSuggestions = document.getElementById('searchSuggestions');
+        const searchClear = document.getElementById('searchClear');
+        let searchTimeout;
+
+        // Search data structure
+        const searchData = [
+            { category: 'Overview', items: [
+                { title: 'What is Hajj?', content: 'Hajj is the annual Islamic pilgrimage to Makkah, Saudi Arabia, and is one of the Five Pillars of Islam.' },
+                { title: 'When is Hajj?', content: 'Hajj occurs during the Islamic month of Dhu al-Hijjah and involves a series of rituals performed over several days.' },
+                { title: 'Who Must Perform Hajj?', content: 'Hajj is obligatory once in a lifetime for every adult Muslim who is physically and financially able.' }
+            ]},
+            { category: 'Types of Hajj', items: [
+                { title: 'Tamattu\'', content: 'Perform Umrah during Hajj months, exit Ihram, then re-enter for Hajj' },
+                { title: 'Qiran', content: 'Perform Umrah and Hajj together without exiting Ihram' },
+                { title: 'Ifrad', content: 'Perform only Hajj (no Umrah)' }
+            ]},
+            { category: 'Hajj Steps', items: [
+                { title: 'Preparation & Intention', content: 'Make the sincere intention to perform Hajj solely for the sake of Allah.' },
+                { title: 'Enter State of Ihram', content: 'At the Miqat, don the special white garments and recite the Talbiyah.' },
+                { title: 'Perform Umrah', content: 'Tawaf, Sa\'i, and shaving/trimming hair.' }
+            ]},
+            { category: 'Important Places', items: [
+                { title: 'Masjid al-Haram', content: 'The Great Mosque in Mecca' },
+                { title: 'Kaaba', content: 'House of Allah' },
+                { title: 'Mount Arafat', content: 'Where pilgrims gather on the Day of Arafah' }
+            ]},
+            { category: 'FAQ', items: [
+                { title: 'Is visiting Madinah part of Hajj?', content: 'No, visiting Madinah is not a Hajj requirement but is highly recommended.' },
+                { title: 'Who is exempt from Hajj?', content: 'Those who are not physically or financially able are exempt.' }
+            ]}
+        ];
+
+        function highlightText(text, searchTerm) {
+            if (!searchTerm) return text;
+            const regex = new RegExp(`(${searchTerm})`, 'gi');
+            return text.replace(regex, '<span class="search-highlight">$1</span>');
+        }
+
+        function filterSearchData(searchTerm) {
+            if (!searchTerm) return [];
+            
+            const results = [];
+            searchData.forEach(category => {
+                category.items.forEach(item => {
+                    if (item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                        item.content.toLowerCase().includes(searchTerm.toLowerCase())) {
+                        results.push({
+                            category: category.category,
+                            title: item.title,
+                            content: item.content
+                        });
+                    }
+                });
+            });
+            return results;
+        }
+
+        function displaySearchResults(results, searchTerm) {
+            searchSuggestions.innerHTML = '';
+            
+            if (results.length === 0) {
+                searchSuggestions.innerHTML = '<div class="no-results">No results found</div>';
+                searchSuggestions.style.display = 'block';
+                return;
+            }
+
+            results.forEach(result => {
+                const div = document.createElement('div');
+                div.className = 'search-suggestion-item';
+                div.innerHTML = `
+                    <div>${highlightText(result.title, searchTerm)}</div>
+                    <div class="search-suggestion-category">${result.category}</div>
+                `;
+                div.addEventListener('click', () => {
+                    searchInput.value = result.title;
+                    searchSuggestions.style.display = 'none';
+                    highlightAllMatches(result.title);
+                });
+                searchSuggestions.appendChild(div);
+            });
+            
+            searchSuggestions.style.display = 'block';
+        }
+
+        function highlightAllMatches(searchTerm) {
+            const sections = document.querySelectorAll('.horizontal-card, .timeline-item-horizontal, .faq-item');
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                if (text.includes(searchTerm.toLowerCase())) {
+                    section.style.display = 'block';
+                    const content = section.innerHTML;
+                    section.innerHTML = content.replace(
+                        new RegExp(searchTerm, 'gi'),
+                        match => `<span class="search-highlight">${match}</span>`
+                    );
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.trim();
+            
+            // Show/hide clear button
+            searchClear.classList.toggle('visible', searchTerm.length > 0);
+            
+            // Clear previous timeout
+            clearTimeout(searchTimeout);
+            
+            // Set new timeout for search
+            searchTimeout = setTimeout(() => {
+                if (searchTerm.length > 0) {
+                    const results = filterSearchData(searchTerm);
+                    displaySearchResults(results, searchTerm);
+                } else {
+                    searchSuggestions.style.display = 'none';
+                    // Reset all sections to visible
+                    document.querySelectorAll('.horizontal-card, .timeline-item-horizontal, .faq-item')
+                        .forEach(section => {
+                            section.style.display = 'block';
+                            section.innerHTML = section.innerHTML.replace(/<span class="search-highlight">(.*?)<\/span>/g, '$1');
+                        });
+                }
+            }, 300);
+        });
+
+        searchClear.addEventListener('click', () => {
+            searchInput.value = '';
+            searchSuggestions.style.display = 'none';
+            searchClear.classList.remove('visible');
+            // Reset all sections
+            document.querySelectorAll('.horizontal-card, .timeline-item-horizontal, .faq-item')
+                .forEach(section => {
+                    section.style.display = 'block';
+                    section.innerHTML = section.innerHTML.replace(/<span class="search-highlight">(.*?)<\/span>/g, '$1');
+                });
+        });
+
+        // Close suggestions when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!searchInput.contains(e.target) && !searchSuggestions.contains(e.target)) {
+                searchSuggestions.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
